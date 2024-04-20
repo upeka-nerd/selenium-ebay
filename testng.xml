@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <test name="firefox-test"></test>
+    <test name="chrome-test"/>
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="url" value="https://www.ebay.com/"/>
+    <test verbose="2" preserve-order="true" name="D:/SQA/SQA_Assignment/target">
+        <classes>
+            <class name="SQA_ict.Main"></class>
+            <class name="SQA_ict.MobilePhone">
+            <methods>
+                <include name="getUrl"></include>
+                <include name="verifyUrl"/>
+                <include name="selectCategory"/>
+                <include name="verifyCategory"/>
+                <include name="searchMobilePhone"/>
+                <include name="selectFirstItemList"/>
+                <include name="selectFirstItem"/>
+            </methods>
+            </class>
+
+        <class name="SQA_ict.PurchesMobilephone">
+            <methods>
+                <include name="firstItemName"/>
+                <include name="firstSelectItemPrice"/>
+                <include name="firstSelectItemQuantity"/>
+                <include name="setcolor"/>
+                <include name="setsize"/>
+                <include name="selectModel"/>
+                <include name="selectNetwork"/>
+                <include name="selectcarrier"/>
+                <include name="selectMemory"/>
+                <include name="setplug"/>
+                <include name="addToCart"/>
+                <include name="assertShoppingCart"/>
+                <include name="checkOut"/>
+                <include name="guestMode"/>
+                <include name="assertTheCheckoutTitle"/>
+
+            </methods>
+
+        </class>
+    </classes>
+
+
+    </test>
+</suite>
